@@ -478,7 +478,7 @@ static int musb_sprd_id_notifier(struct notifier_block *nb,
 		}
 		//tp in usb mode
 		if(tp_usb_flag == 0){
-			tp_usb_notifier_call_chain(1,NULL);
+// 			tp_usb_notifier_call_chain(1,NULL);
 			tp_usb_flag = 1;
 
 		}
