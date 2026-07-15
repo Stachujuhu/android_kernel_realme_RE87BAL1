@@ -84,7 +84,7 @@ struct sprd_glue {
 
 static int boot_charging;
 static int tp_usb_flag = 0;
-extern int prj_name;	//1: NICO 2: NICKY 3:NICKY-A
+static int prj_name = 1; // hardcoded NICO board, avoids charger-manager dependency
 extern void sc27xx_force_dpdm(void);
 extern enum usb_charger_type sgm4154x_charger_redetect(void);
 
@@ -498,7 +498,7 @@ static int musb_sprd_id_notifier(struct notifier_block *nb,
 		}
 		//tp out usb mode
 		if(tp_usb_flag == 1){
-			tp_usb_notifier_call_chain(0,NULL);
+// 			tp_usb_notifier_call_chain(0,NULL);
 			tp_usb_flag = 0;
 		}
 

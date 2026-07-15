@@ -12,6 +12,7 @@
  * GNU General Public License for more details.
  */
 
+#define VENDOR_KERNEL
 #include <linux/delay.h>
 #include <linux/device.h>
 #include <linux/io.h>
