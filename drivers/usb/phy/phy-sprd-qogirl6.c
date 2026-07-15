@@ -68,7 +68,7 @@
 #ifndef VENDOR_KERNEL
 extern enum usb_charger_type sgm4154x_charger_detect(void);
 #endif
-extern int prj_name;
+static int prj_name = 1; // hardcoded NICO board
 struct sprd_hsphy {
 	struct device		*dev;
 	struct usb_phy		phy;
